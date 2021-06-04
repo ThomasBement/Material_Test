@@ -55,7 +55,11 @@ def animate(i):
     ax1.clear()
     ax1.title.set_text('Particles Under 0.3um vs. Time')
     ax1.set(xlabel='Time (s)', ylabel='Particle Count')
-    ax1.plot(dat[0], dat[1])
+    if (len(dat[0]) <= 6):
+        ax1.plot(dat[0], dat[1])
+    else:
+        ax1.plot(dat[0][-6:-1], dat[1][-6:-1]) 
+    
 
 start_time = time.time()
 ani = animation.FuncAnimation(fig, animate, interval=1)

@@ -174,6 +174,7 @@ def saveDat(dat, times, location, sensorNames, Numb, writeLis = ['Bin']):
     binsUp = []
     keysUp = []
     keysDown = {}
+    
     # For the upstream sensor we write the numerical bin sizes to an array
     for key in headersUp['UpStream']:
         header = key.split(writeLis[1]+'Conc_')[-1]
@@ -188,9 +189,12 @@ def saveDat(dat, times, location, sensorNames, Numb, writeLis = ['Bin']):
             keysDown[key] = find_nearest(binsUp, float(header))
     # Peroform the writting for the correection factors        
     for i in range(1, len(times['Start_Time']), 2):
-        # Get two times for opening files (one is the reference frame from whicht he calibration factor is found)
+        # Get two times for opening files (one is the reference frame from which the calibration factor is found)
         time0 = datetime.utcfromtimestamp(int(times['Start_Time'][i-1])).strftime('%Y-%m-%d_%H_%M_%S')
         time1 = datetime.utcfromtimestamp(int(times['Start_Time'][i])).strftime('%Y-%m-%d_%H_%M_%S')
+        print(times['Start_Time'][i-1], times['Stop_Time'][i-1])
+        print(times['Start_Time'][i], times['Stop_Time'][i])
+        print('\n')
         start0 = np.where(dat[sensor]['Epoch_UTC'] >= times['Start_Time'][i-1])[0][0]
         stop0 = np.where(dat[sensor]['Epoch_UTC'] >= times['Stop_Time'][i-1])[0][0]
         start1 = np.where(dat[sensor]['Epoch_UTC'] >= times['Start_Time'][i])[0][0]
