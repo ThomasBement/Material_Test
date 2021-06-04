@@ -1,0 +1,17 @@
+BOX DIMENSIONS:
+top,
+L(mid) = 565mm
+L(edge) = 550 mm
+W = 375 mm
+rounded edge = 17.5mm
+
+bot,
+L(mid) = 485 mm
+L(edge) = 465 mm
+W = 300 mm
+
+height = 370 mm
+thickness = 2 mm
+
+DUCT DIMENSIONS:
+ID = 150 mm (liekly a 6 in duct)
