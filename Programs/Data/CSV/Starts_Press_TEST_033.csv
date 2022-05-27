@@ -1,0 +1,14 @@
+Filter,dP (Pa),Sample
+bypass,0,10
+H400x1,57,12
+bypass,0,14
+H400x1 Repeat 1,68,16
+bypass,0,18
+H400x1 Repeat 2,64,20
+bypass,0,22
+PELL-930x5,9,24
+bypass,0,26
+PELL-930x5 Repeat 1,9,28
+bypass,0,30
+PELL-930x5 Repeat 2,10,32
+bypass,0,34

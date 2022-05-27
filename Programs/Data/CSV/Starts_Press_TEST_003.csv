@@ -1,0 +1,22 @@
+Filter,dP (Pa),Sample
+bypass,0,12
+QA2-0x1,10,14
+bypass,0,16
+QA2-0x2,22,18
+bypass,0,20
+QA2-1x1,16,22
+bypass,0,24
+QA2-1x2,30,26
+bypass,0,28
+QA2-2x1,30,30
+bypass,0,32
+Jan. 13-3x2,27,34
+bypass,0,36
+Apr. 22-1x1,28,38
+bypass,0,40
+Apr. 26-1x1,16,42
+bypass,0,44
+Apr. 26-1x2,26,46
+bypass,0,48
+Apr. 26-2x1,113,50
+bypass,0,52

@@ -1,0 +1,82 @@
+Filter,dP (Pa),Sample
+bypass,0,10
+QA2-3x1,7,12
+bypass,0,14
+QA2-3x1 Repeat 1,7,16
+bypass,0,18
+QA2-3x4,34,20
+bypass,0,22
+QA2-3x4 Repeat 1,32,24
+bypass,0,26
+QA2-4x1,12,28
+bypass,0,30
+QA2-4x1 Repeat 1,12,32
+bypass,0,34
+QA2-4x2,24,36
+bypass,0,38
+QA2-4x2 Repeat 1,24,40
+bypass,0,42
+QA2-5x1,16,44
+bypass,0,46
+QA2-5x1 Repeat 1,19,48
+bypass,0,50
+QA2-5x2,38,52
+bypass,0,54
+QA2-5x2 Repeat 1,37,56
+bypass,0,58
+QA2-6x1,7,60
+bypass,0,62
+QA2-6x1 Repeat 1,6,64
+bypass,0,66
+QA2-6x4,33,68
+bypass,0,70
+QA2-6x4 Repeat 1,32,72
+bypass,0,74
+QA2-7x1,5,76
+bypass,0,78
+QA2-7x1 Repeat 1,4,80
+bypass,0,82
+QA2-7x5,31,84
+bypass,0,86
+QA2-7x5 Repeat 1,30,88
+bypass,0,90
+QA2-8x1,4,92
+bypass,0,94
+QA2-8x1 Repeat 1,3,96
+bypass,0,98
+QA2-8x6,30,100
+bypass,0,102
+QA2-8x6 Repeat 1,30,104
+bypass,0,106
+QA2-9x1,6,108
+bypass,0,110
+QA2-9x1 Repeat 1,5,112
+bypass,0,114
+QA2-9x4,28,116
+bypass,0,118
+QA2-9x4 Repeat 1,28,120
+bypass,0,122
+QA2-10x1,5,124
+bypass,0,126
+QA2-10x1 Repeat 1,5,128
+bypass,0,130
+QA2-10x4,26,132
+bypass,0,134
+QA2-10x4 Repeat 1,25,136
+bypass,0,138
+QA2-11x1,6,140
+bypass,0,142
+QA2-11x1 Repeat 1,8,144
+bypass,0,146
+QA2-11x3,30,148
+bypass,0,150
+QA2-11x3 Repeat 1,33,152
+bypass,0,154
+QA2-12x1,11,156
+bypass,0,158
+QA2-12x1 Repeat 1,13,160
+bypass,0,162
+QA2-12x2,20,164
+bypass,0,166
+QA2-12x2 Repeat 1,28,168
+bypass,0,170

@@ -1,0 +1,14 @@
+Filter,dP (Pa),Sample
+bypass,0,4
+SB1-1x,4,6
+bypass,0,8
+SB1-1x-Repeat1,4,10
+bypass,0,12
+SB1-3x,14,14
+bypass,0,16
+SB1-3x-Repeat1,15,18
+bypass,0,20
+SB1-5x,26,22
+bypass,0,24
+SB1-5x-Repeat1,25,26
+bypass,0,28

@@ -1,0 +1,38 @@
+Name,dP,Sample
+bypass,0,6
+SB1x1,5,8
+bypass,0,10
+SB1x1 Repeat 1,4,12
+bypass,0,14
+SB1x1 Repeat 2,5,16
+bypass,0,18
+SB2x1,2,20
+bypass,0,22
+SB2x1 Repeat 1,2,24
+bypass,0,26
+SB2x1 Repeat 2,1,28
+bypass,0,30
+SB4x1,2,32
+bypass,0,34
+SB4x1 Repeat 1,2,36
+bypass,0,38
+SB4x1 Repeat 2,2,40
+bypass,0,42
+SW1x1,23,44
+bypass,0,46
+SW1x1 Repeat 1,21,48
+bypass,0,50
+SW1x1 Repeat 2,19,52
+bypass,0,54
+OLFNx1,7,56
+bypass,0,58
+OLFNx1 Repeat 1,6,60
+bypass,0,62
+OLFNx1 Repeat 2,6,64
+bypass,0,66
+PELL-930x1,1,68
+bypass,0,70
+PELL-930x1 Repeat 1,1,72
+bypass,0,74
+PELL-930x1 Repeat 2,2,76
+bypass,0,78

@@ -167,6 +167,17 @@ def saveDat(allDat, starts, loacationSave, mesurmentTyp, sensorTyp):
             CF.append(((temp['UpStream'][i-2][2][DownStream_Keys[4][j]]/temp['UpStream'][i-1][2][DownStream_Keys[4][j]]) + (temp['UpStream'][i][2][DownStream_Keys[4][j]]/temp['UpStream'][i-1][2][DownStream_Keys[4][j]]))/2)
             countsM.append(temp['DownStream'][i-1][2][DownStream_Keys[3][j]])
             countsNM.append((temp['DownStream'][i-2][2][DownStream_Keys[3][j]] + temp['DownStream'][i][2][DownStream_Keys[3][j]])/2)
+            if  (DownStream_Keys[4][j] == 0):
+                # Particles in the 0.3-0.5 range
+                CF.append(((temp['UpStream'][i-2][2][DownStream_Keys[4][j]]/temp['UpStream'][i-1][2][DownStream_Keys[4][j]]) + (temp['UpStream'][i][2][DownStream_Keys[4][j]]/temp['UpStream'][i-1][2][DownStream_Keys[4][j]]))/2)
+            else:
+                # Particles need privious bin subtracted to remove the 0.3 to the lower bound particles 
+                top_0 = temp['UpStream'][i-2][2][DownStream_Keys[4][j]] - temp['UpStream'][i-2][2][DownStream_Keys[4][j]-1]
+                bot_0 = temp['UpStream'][i-1][2][DownStream_Keys[4][j]] - temp['UpStream'][i-1][2][DownStream_Keys[4][j]-1]
+                top_1 = temp['UpStream'][i][2][DownStream_Keys[4][j]] - temp['UpStream'][i][2][DownStream_Keys[4][j]-1]
+                bot_1 = temp['UpStream'][i-1][2][DownStream_Keys[4][j]] - temp['UpStream'][i-1][2][DownStream_Keys[4][j]-1]
+                CF.append(((top_0/bot_0) + (top_1/bot_1))/2)
+                
         results[temp['DownStream'][i-1][0]][1] = CF
         results[temp['DownStream'][i-1][0]][2] = countsM
         results[temp['DownStream'][i-1][0]][3] = countsNM
@@ -206,6 +217,13 @@ def compareBox(dat, layers):
         ticks.append(key.split('_')[0])
         for i in range(len(dat[layers][key])):
             dat[layers][key][i] =  np.array(dat[layers][key][i])
+    ticks_a, ticks_b, ticks_float = [float(ticks[0]) + (float(ticks[1])-float(ticks[0]))/4], [float(ticks[0]) - (float(ticks[1])-float(ticks[0]))/4], [float(ticks[0])]
+    for i in range(1, len(ticks)):
+        offset = (float(ticks[i])-float(ticks[i-1]))/4
+        ticks_a.append(float(ticks[i]) + offset)
+        ticks_b.append(float(ticks[i]) - offset)
+        ticks_float.append(float(ticks[i]))
+        ticks[i] = '%.2f' %float(ticks[i])
     # Scale data to a z-statistic
     data_a = []
     data_b = []
@@ -228,18 +246,28 @@ def compareBox(dat, layers):
         stats_b[2].append(np.std(data_b[i]))
     
     plt.figure()
-    plt.title('Visualization of Mean and STD of Efficencies for %s' %layers)
-    plt.xlabel('Particle Size [um]')
-    plt.ylabel('Filtration Efficency [%]')
+    plt.title('Visualization of Mean and STD of Efficencies for %s' %layers, fontsize=25)
+    plt.xlabel('Particle Size [um]', fontsize=20)
+    plt.ylabel('Filtration Efficency [%]', fontsize=20)
+    plt.ylim(-0.10, 1.10)
     plt.plot([], c='#D7191C', label='Regular')
     plt.plot([], c='#2C7BB6', label='Corrected')
     plt.legend()
 
+    error_a, error_b = [], []
+    means_a, means_b = [], []
     for i in range(len(stats_a[0])):
-        plt.scatter(ticks[i], stats_a[1][i], color = '#D7191C', marker="+")
-        plt.scatter([ticks[i], ticks[i]], [stats_a[1][i]+stats_a[2][i], stats_a[1][i]-stats_a[2][i]], color = '#D7191C', marker="_")
-        plt.scatter(ticks[i], stats_b[1][i], color = '#2C7BB6', marker="+")
-        plt.scatter([ticks[i], ticks[i]], [stats_b[1][i]+stats_b[2][i], stats_b[1][i]-stats_b[2][i]], color = '#2C7BB6', marker="_")
+        error_a.append(stats_a[2][i])
+        error_b.append(stats_b[2][i])
+        means_a.append(stats_a[1][i])
+        means_b.append(stats_b[1][i])
+
+    plt.errorbar(ticks_a, means_a, yerr = error_a, xerr = None, linestyle='', marker ='s', markersize = 3, capsize=2, color = '#D7191C')
+    plt.errorbar(ticks_b, means_b, yerr = error_b, xerr = None, linestyle='', marker ='s', markersize = 3, capsize=2, color = '#2C7BB6')
+    
+    plt.tick_params(axis='both', which='major', labelsize=14)
+    plt.tick_params(axis='both', which='minor', labelsize=14)
+    plt.xticks(ticks_float[:14], ticks[:14], rotation=90, ) 
 
     plt.show()
     plt.close()
@@ -264,7 +292,7 @@ def compareBox(dat, layers):
     #plt.savefig('BoxCompare_%s.png' %layers)
     #mng = plt.get_current_fig_manager()
     #mng.full_screen_toggle()
-    plt.show()
+    #plt.show()
     plt.close()
 
 def main():
@@ -320,6 +348,6 @@ def main():
                 plt_results['SB1-5x'][bins[i]][1].append(results[key][2][i])
                 plt_results['SB1-5x'][bins[i]][2].append(results[key][3][i])
     
-    compareBox(plt_results, 'SB1-5x')
+    compareBox(plt_results, 'SB1-1x')
     
 main()

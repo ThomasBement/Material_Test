@@ -1,0 +1,22 @@
+Mask,t,DOF,Condition
+SMT_FB_THCKx3,-0.8660,4.0000,Fail to Reject
+SMT_FB_THCKx5,0.0000,4.0000,Fail to Reject
+SMT_FB_THCKx7,0.0000,4.0000,Fail to Reject
+OLFNx1,0.0000,4.0000,Fail to Reject
+OLFNx2,0.0000,4.0000,Fail to Reject
+OLFNx3,0.6547,4.0000,Fail to Reject
+ADVANCHK_SMSx1,0.4027,4.0000,Fail to Reject
+ADVANCHK_SMSx2,0.2437,4.0000,Fail to Reject
+ADVANCHK_SMSx3,0.0000,4.0000,Fail to Reject
+H400x1,0.0000,4.0000,Fail to Reject
+H400x2,-0.5359,4.0000,Fail to Reject
+H400x3,0.0000,4.0000,Fail to Reject
+H100x1,1.2247,4.0000,Fail to Reject
+H100x2,0.9820,4.0000,Fail to Reject
+H100x3,0.7385,4.0000,Fail to Reject
+PELL_930x5,-0.9258,4.0000,Fail to Reject
+PELL_930x10,-0.6124,4.0000,Fail to Reject
+PELL_930x15,0.3612,4.0000,Fail to Reject
+FLANNELx1,-0.5620,4.0000,Fail to Reject
+FLANNELx2,0.3273,4.0000,Fail to Reject
+FLANNELx3,-0.0824,4.0000,Fail to Reject

@@ -1,0 +1,44 @@
+Filter,dP (Pa),Sample
+bypass,0,10
+SB1x5,23,12
+bypass,0,14
+SB1x5 Repeat 1,24,16
+bypass,0,18
+SB1x5 Repeat 2,24,20
+bypass,0,22
+SB1x7,35,24
+bypass,0,26
+SB1x7 Repeat 1,41,28
+bypass,0,30
+SB1x7 Repeat 2,45,32
+bypass,0,34
+H400x2,115,36
+bypass,0,38
+H400x2 Repeat 1,112,40
+bypass,0,42
+H400x2 Repeat 2,104,44
+bypass,0,46
+H400x3,187,48
+bypass,0,50
+H400x3 Repeat 1,178,52
+bypass,0,54
+H400x3 Repeat 2,170,56
+bypass,0,58
+CAN 95 IPAx1,46,60
+bypass,0,62
+CAN 95 IPAx1 Repeat 1,49,64
+bypass,0,66
+CAN 95 IPAx1 Repeat 2,45,68
+bypass,0,70
+CAN 99 IPAx1,39,72
+bypass,0,74
+CAN 99 IPAx1 Repeat 1,47,76
+bypass,0,78
+CAN 99 IPAx1 Repeat 2,36,80
+bypass,0,82
+CAN 99 IPAx1,X,84
+bypass,0,86
+CAN 99 IPAx1 Repeat 1,X,88
+bypass,0,90
+CAN 99 IPAx1 Repeat 2,X,92
+bypass,0,94

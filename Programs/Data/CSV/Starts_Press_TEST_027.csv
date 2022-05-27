@@ -1,0 +1,8 @@
+Filter,dP (Pa),Sample
+bypass,0,4
+3M 1860x1,45,6
+bypass,0,8
+3M 1860x1 Repeat 1,42,10
+bypass,0,12
+3M 1860x1 Repeat 2,39,14
+bypass,0,16

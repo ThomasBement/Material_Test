@@ -1,0 +1,21 @@
+SMT_FB_THCKx3,-0.3244,4.0000,Fail to Reject
+SMT_FB_THCKx5,2.5661,4.0000,Reject
+SMT_FB_THCKx7,2.0468,4.0000,Fail to Reject
+OLFNx1,-0.1596,4.0000,Fail to Reject
+OLFNx2,0.2507,4.0000,Fail to Reject
+OLFNx3,-0.4101,4.0000,Fail to Reject
+ADVANCHK_SMSx1,1.4144,4.0000,Fail to Reject
+ADVANCHK_SMSx2,0.4810,4.0000,Fail to Reject
+ADVANCHK_SMSx3,-0.0052,4.0000,Fail to Reject
+H400x1,1.2247,4.0000,Fail to Reject
+H400x2,-0.1459,4.0000,Fail to Reject
+H400x3,1.2247,4.0000,Fail to Reject
+H100x1,-0.6072,4.0000,Fail to Reject
+H100x2,-3.6780,4.0000,Reject
+H100x3,-1.2247,4.0000,Fail to Reject
+PELL_930x5,4.7844,4.0000,Reject
+PELL_930x10,1.8438,4.0000,Fail to Reject
+PELL_930x15,0.4232,4.0000,Fail to Reject
+FLANNELx1,1.8130,4.0000,Fail to Reject
+FLANNELx2,-0.3536,4.0000,Fail to Reject
+FLANNELx3,-0.1931,4.0000,Fail to Reject

@@ -1,0 +1,8 @@
+Mask,t,DOF,Condition
+Mask A,2.5011,4.0000,Pass
+Mask B,-2.5490,4.0000,Pass
+Mask C,-3.3449,4.0000,Pass
+Mask D,-5.0438,4.0000,Reject
+Mask E,-7.2777,4.0000,Reject
+Mask F,-0.5883,4.0000,Pass
+Mask G,5.6598,4.0000,Reject
